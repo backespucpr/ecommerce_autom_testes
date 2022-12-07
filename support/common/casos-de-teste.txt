@@ -1,0 +1,37 @@
+Administrador
+    Adm 01 - Validar  inscrição de um novo administrador;
+        - Dado que eu queira cadastrar um novo administrador
+        - Quando clico na opção admin
+        - E informo os dados para cadastro 
+        - E clico na opção "Sign Up"
+        - Então á pagina de "Confirm Sign Up" deve aparecer
+        - Quando informo os dados usuário e autenticação
+        - E clico na opção Confirm Sign Up
+        - Então a página "Sign in" deve aparecer
+    Adm 02 - Validar login como administrador;
+        - Dado que eu queira fazer login como usuário
+        - Quando eu clico na opção admin
+        - E clico na opção "Already signed up?"
+        - E informo os dados para login
+        - Então a pagina "Invetory" deve aparecer
+        
+    Adm 03 - Validar recuperação de senha;
+        - Aplicação sem funcionalidade definidada
+
+    //redudanten Adm 04 - Validar acesso ao inventário;      
+        - 
+    Adm 05 - Validar adicionar item ao inventário;
+    Adm 06 - Validar excluir item do inventário;
+    Adm 07 - Validar logout na página inventário;
+    Adm 08 - Validar logout na página de adicionar produto.
+Fluxo de navegação
+    Fn 01 - Validar acesso a página Categorias ;
+    Fn 02 - Validar acesso a página Categorias/Novos produtos;
+    Fn 03 - Validar acesso a página Categorias/Ofertas;
+    Fn 04 - Validar acesso a página Categorias/Sofás;
+    Fn 05 - Validar acesso a página Categorias/Sala de Estar;
+    Fn 06 - Validar acesso a página Categorias/Poltronas.
+Fluxo de Compra
+    Fc 01 - Validar inserção de produtos no carrinho;
+    Fc 02 - Validar remoção de produtos no carrinho;
+    Fc 03 - Validar compra no cartão de credito .

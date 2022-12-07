@@ -6,8 +6,8 @@ Documentation    Variaveis para acoes gerais
 
 #variavel de URL
 
-${URL}              http://localhost:3000/
-${SITE_TITULO}      Jamstack ECommerce
+${URL}              http://localhost:3000
+#${SITE_TITULO}      Jamstack ECommerce
 
 
 #Variaveis de cores

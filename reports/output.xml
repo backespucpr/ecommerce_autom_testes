@@ -1,60 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20221206 21:37:52.579" rpa="false" schemaversion="3">
-<suite id="s1" name="Adm Test" source="/home/neybackes/Documentos/JamStack_automationTests/tests/adm_test.robot">
-<kw name="Acessar Pagina" library="common" type="SETUP">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20221207 17:53:32.452" rpa="false" schemaversion="3">
+<suite id="s1" name="Adm Test" source="/home/neybackes/Documentos/jamstack_autom_testes/ecommerce_autom_testes/tests/adm_test.robot">
+<kw name="Acessar Home" library="common" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221206 21:37:52.839" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
-<status status="PASS" starttime="20221206 21:37:52.838" endtime="20221206 21:37:58.195"/>
+<msg timestamp="20221207 17:53:32.588" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20221207 17:53:32.588" endtime="20221207 17:53:36.038"/>
 </kw>
-<status status="PASS" starttime="20221206 21:37:52.837" endtime="20221206 21:37:58.196"/>
+<status status="PASS" starttime="20221207 17:53:32.587" endtime="20221207 17:53:36.038"/>
 </kw>
-<test id="s1-t1" name="Cenario: Deve validar o titulo" line="10">
+<test id="s1-t1" name="Cenario: Validar o login como administrador" line="18">
 <kw name="Iniciar cores de resposta" library="common">
 <kw name="Evaluate" library="BuiltIn">
 <var>${red}</var>
 <arg>${RED}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221206 21:37:58.204" level="INFO">${red} = [31m</msg>
-<status status="PASS" starttime="20221206 21:37:58.202" endtime="20221206 21:37:58.204"/>
+<msg timestamp="20221207 17:53:36.041" level="INFO">${red} = [31m</msg>
+<status status="PASS" starttime="20221207 17:53:36.041" endtime="20221207 17:53:36.041"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${red}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20221206 21:37:58.206" level="INFO">${red} = [31m</msg>
-<status status="PASS" starttime="20221206 21:37:58.205" endtime="20221206 21:37:58.207"/>
+<msg timestamp="20221207 17:53:36.042" level="INFO">${red} = [31m</msg>
+<status status="PASS" starttime="20221207 17:53:36.041" endtime="20221207 17:53:36.042"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${yellow}</var>
 <arg>${YELLOW}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221206 21:37:58.209" level="INFO">${yellow} = [33m</msg>
-<status status="PASS" starttime="20221206 21:37:58.207" endtime="20221206 21:37:58.209"/>
+<msg timestamp="20221207 17:53:36.043" level="INFO">${yellow} = [33m</msg>
+<status status="PASS" starttime="20221207 17:53:36.042" endtime="20221207 17:53:36.043"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${yellow}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20221206 21:37:58.211" level="INFO">${yellow} = [33m</msg>
-<status status="PASS" starttime="20221206 21:37:58.209" endtime="20221206 21:37:58.211"/>
+<msg timestamp="20221207 17:53:36.043" level="INFO">${yellow} = [33m</msg>
+<status status="PASS" starttime="20221207 17:53:36.043" endtime="20221207 17:53:36.043"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${green}</var>
 <arg>${GREEN}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221206 21:37:58.213" level="INFO">${green} = [32m</msg>
-<status status="PASS" starttime="20221206 21:37:58.211" endtime="20221206 21:37:58.213"/>
+<msg timestamp="20221207 17:53:36.045" level="INFO">${green} = [32m</msg>
+<status status="PASS" starttime="20221207 17:53:36.044" endtime="20221207 17:53:36.045"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${green}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20221206 21:37:58.214" level="INFO">${green} = [32m</msg>
-<status status="PASS" starttime="20221206 21:37:58.213" endtime="20221206 21:37:58.215"/>
+<msg timestamp="20221207 17:53:36.046" level="INFO">${green} = [32m</msg>
+<status status="PASS" starttime="20221207 17:53:36.045" endtime="20221207 17:53:36.046"/>
 </kw>
-<status status="PASS" starttime="20221206 21:37:58.201" endtime="20221206 21:37:58.215"/>
+<status status="PASS" starttime="20221207 17:53:36.040" endtime="20221207 17:53:36.046"/>
 </kw>
-<kw name="Validar TItulo" library="adm_keywords">
+<kw name="Validar TItulo" library="common">
+<arg>Jamstack ECommerce</arg>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status}</var>
 <arg>Title Should Be</arg>
@@ -63,62 +64,131 @@
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${SITE_TITULO}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221206 21:37:58.230" level="INFO">Page title is 'Jamstack ECommerce'.</msg>
-<status status="PASS" starttime="20221206 21:37:58.219" endtime="20221206 21:37:58.230"/>
+<msg timestamp="20221207 17:53:36.065" level="INFO">Page title is 'Jamstack ECommerce'.</msg>
+<status status="PASS" starttime="20221207 17:53:36.047" endtime="20221207 17:53:36.065"/>
 </kw>
-<msg timestamp="20221206 21:37:58.231" level="INFO">${status} = True</msg>
-<status status="PASS" starttime="20221206 21:37:58.218" endtime="20221206 21:37:58.231"/>
+<msg timestamp="20221207 17:53:36.066" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20221207 17:53:36.047" endtime="20221207 17:53:36.066"/>
+</kw>
+<status status="PASS" starttime="20221207 17:53:36.046" endtime="20221207 17:53:36.066"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221207 17:53:36.066" endtime="20221207 17:53:36.180"/>
+</kw>
+<kw name="Acessar Pagina" library="common">
+<arg>admin</arg>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}/${PAGINA}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221207 17:53:36.181" level="INFO">Opening url 'http://localhost:3000/admin'</msg>
+<status status="PASS" starttime="20221207 17:53:36.181" endtime="20221207 17:53:37.886"/>
+</kw>
+<status status="PASS" starttime="20221207 17:53:36.180" endtime="20221207 17:53:37.886"/>
+</kw>
+<kw name="Validar login administrador" library="adm_keywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${status}</var>
+<arg>Login administrador</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Login administrador" library="adm_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:#__next main div .flex a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221207 17:53:37.889" level="INFO">Clicking element 'css:#__next main div .flex a'.</msg>
+<status status="PASS" starttime="20221207 17:53:37.888" endtime="20221207 17:53:37.975"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 17:53:37.976" level="INFO">Typing text 'teste' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20221207 17:53:37.975" endtime="20221207 17:53:38.074"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 17:53:38.075" level="INFO">Typing text '123456' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20221207 17:53:38.074" endtime="20221207 17:53:38.176"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Sign In</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221207 17:53:38.177" level="INFO">Clicking button 'Sign In'.</msg>
+<status status="PASS" starttime="20221207 17:53:38.177" endtime="20221207 17:53:38.369"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221207 17:53:40.369" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221207 17:53:38.369" endtime="20221207 17:53:40.369"/>
+</kw>
+<kw name="Validar Elemento da Pagina" library="common">
+<arg>css:#__next .text-3xl</arg>
+<arg>Inventory</arg>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${SELETOR}</arg>
+<arg>${ELEMENTO_PAGINA}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221207 17:53:40.392" level="INFO">Current page contains element 'css:#__next .text-3xl'.</msg>
+<status status="PASS" starttime="20221207 17:53:40.370" endtime="20221207 17:53:40.392"/>
+</kw>
+<status status="PASS" starttime="20221207 17:53:40.370" endtime="20221207 17:53:40.392"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>View Inventory</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221207 17:53:40.464" level="INFO">Current page contains text 'View Inventory'.</msg>
+<status status="PASS" starttime="20221207 17:53:40.393" endtime="20221207 17:53:40.464"/>
+</kw>
+<status status="PASS" starttime="20221207 17:53:37.887" endtime="20221207 17:53:40.464"/>
+</kw>
+<msg timestamp="20221207 17:53:40.464" level="INFO">${status} = True</msg>
+<status status="PASS" starttime="20221207 17:53:37.887" endtime="20221207 17:53:40.464"/>
 </kw>
 <if>
 <branch type="IF" condition="${status} == True">
 <kw name="Log To Console" library="BuiltIn">
-<arg>${yellow}${SITE_TITULO} ${yellow}</arg>
+<arg>${green}Teste passou ${green}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221206 21:37:58.232" endtime="20221206 21:37:58.233"/>
+<status status="PASS" starttime="20221207 17:53:40.465" endtime="20221207 17:53:40.466"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${green}Validado com Sucesso${green}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221206 21:37:58.233" endtime="20221206 21:37:58.234"/>
-</kw>
-<status status="PASS" starttime="20221206 21:37:58.231" endtime="20221206 21:37:58.235"/>
+<status status="PASS" starttime="20221207 17:53:40.465" endtime="20221207 17:53:40.466"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" library="BuiltIn">
-<arg>${yellow}${SITE_TITULO} ${yellow}</arg>
+<arg>${red}Teste falhou ${red}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221206 21:37:58.236" endtime="20221206 21:37:58.236"/>
+<status status="NOT RUN" starttime="20221207 17:53:40.466" endtime="20221207 17:53:40.466"/>
 </kw>
-<kw name="Fail" library="BuiltIn">
-<arg>${red}titulo da página não validado${red}</arg>
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" starttime="20221206 21:37:58.236" endtime="20221206 21:37:58.237"/>
-</kw>
-<status status="NOT RUN" starttime="20221206 21:37:58.235" endtime="20221206 21:37:58.237"/>
+<status status="NOT RUN" starttime="20221207 17:53:40.466" endtime="20221207 17:53:40.467"/>
 </branch>
-<status status="PASS" starttime="20221206 21:37:58.231" endtime="20221206 21:37:58.237"/>
+<status status="PASS" starttime="20221207 17:53:40.465" endtime="20221207 17:53:40.467"/>
 </if>
-<status status="PASS" starttime="20221206 21:37:58.216" endtime="20221206 21:37:58.237"/>
+<status status="PASS" starttime="20221207 17:53:37.886" endtime="20221207 17:53:40.467"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221206 21:37:58.238" endtime="20221206 21:37:58.345"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221207 17:53:43.468" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221207 17:53:40.467" endtime="20221207 17:53:43.468"/>
 </kw>
-<tag>TITULO_PAGINA</tag>
-<status status="PASS" starttime="20221206 21:37:58.197" endtime="20221206 21:37:58.345"/>
+<tag>LOGIN_ADM</tag>
+<status status="PASS" starttime="20221207 17:53:36.039" endtime="20221207 17:53:43.469"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221206 21:37:58.348" endtime="20221206 21:37:58.425"/>
+<status status="PASS" starttime="20221207 17:53:43.471" endtime="20221207 17:53:43.543"/>
 </kw>
-<status status="PASS" starttime="20221206 21:37:52.580" endtime="20221206 21:37:58.425"/>
+<status status="PASS" starttime="20221207 17:53:32.453" endtime="20221207 17:53:43.543"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">TITULO_PAGINA</stat>
+<stat pass="1" fail="0" skip="0">LOGIN_ADM</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Adm Test">Adm Test</stat>
