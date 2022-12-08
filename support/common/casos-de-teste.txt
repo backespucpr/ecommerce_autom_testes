@@ -1,4 +1,4 @@
-Administrador
+
     Adm 01 - Validar  inscrição de um novo administrador;
         - Dado que eu queira cadastrar um novo administrador
         - Quando clico na opção admin
@@ -8,6 +8,7 @@ Administrador
         - Quando informo os dados usuário e autenticação
         - E clico na opção Confirm Sign Up
         - Então a página "Sign in" deve aparecer
+        
     Adm 02 - Validar login como administrador;
         - Dado que eu queira fazer login como usuário
         - Quando eu clico na opção admin
@@ -18,12 +19,35 @@ Administrador
     Adm 03 - Validar recuperação de senha;
         - Aplicação sem funcionalidade definidada
 
-    //redudanten Adm 04 - Validar acesso ao inventário;      
+    //redudante Adm 04 - Validar acesso ao inventário;      
         - 
     Adm 05 - Validar adicionar item ao inventário;
+        - Dado que eu queira cadastra um novo produto no inventario
+        - Quando eu faco login com administrador
+        - e entro na opçao adicionar "add item"
+        - e adiciono os dados do novo produto 
+        - Entao ao clicar na opcao "Add item" o produto deve ser cadastrado"
+
     Adm 06 - Validar excluir item do inventário;
+        - Dado que eu queria excluir um produto do inventário
+        - Quando eu faco login como adiminstrador
+        - e acesso a pagina "Invetory"
+        - e clico em remove produto de um elemento
+        - Então o produto deve ser removido do inventário
+
     Adm 07 - Validar logout na página inventário;
+        - Dado que eu queira fazer logout como administrador
+        - Quando faco login com Administrador
+        - e estou dentro de página inventário
+        - e clico em na opção "Sign Out"
+        - Entao devo retornar ao Painel Administrativo
     Adm 08 - Validar logout na página de adicionar produto.
+        - Dado que eu queira fazer logout como administrador
+        - Quando faco login com Administrador
+        - e estou dentro de página inventário
+        - e clico na opção "Add item"
+        - e clicl na opção "Sign out"
+        - Então devo retornar ao Painel Administrativo
 Fluxo de navegação
     Fn 01 - Validar acesso a página Categorias ;
     Fn 02 - Validar acesso a página Categorias/Novos produtos;

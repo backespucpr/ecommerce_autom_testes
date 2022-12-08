@@ -22,9 +22,38 @@ Cenario: Validar o login como administrador
     Maximize Browser Window
     Acessar pagina                          admin  
     Validar login administrador
-    sleep                                   3
+    sleep                                   2
+Cenario: Cadastrar um novo produto no inventário
+    [Tags]                                  CADASTRO_PRODUTO
+    Iniciar cores de resposta
+    Validar Titulo                          Jamstack ECommerce 
+    Maximize Browser Window
+    Acessar pagina                          admin  
+    Login administrador
+    Validar Cadastro Produto
 
-    
+
+Cenario: Validar Logout do administrador pagina inventario
+    [Tags]                                  LOGOUT_ADM_INVENTARIO
+    Iniciar cores de resposta
+    Validar Titulo                          Jamstack ECommerce 
+    Maximize Browser Window
+    Acessar pagina                          admin  
+    Login administrador
+    sleep                                   2
+    Validar Logout Administrador pagina inventario
+    sleep                                   2
+
+Cenario: Validar Logout do administrador pagina adicionar produto
+    [Tags]                                  LOGOUT_ADM_ADD_PRODUTO
+    Iniciar cores de resposta
+    Validar Titulo                          Jamstack ECommerce 
+    Maximize Browser Window
+    Acessar pagina                          admin  
+    Login administrador
+    sleep                                   2
+    Validar Logout Administrador pagina adiconar produto
+    sleep                                   2
 
 
     

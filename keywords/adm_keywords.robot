@@ -52,24 +52,70 @@ Validar login administrador
     ELSE
         Log To Console    ${red}Teste falhou ${red}
     END
-
-
-
-   
+#--------------------------------------------------------------
+#Cadastro de novo produto
+Cadastrar novo produto
+    #${file_path}    /home/neybackes/Documentos/jamstack_autom_testes/ecommerce_autom_testes/support/common/produto_exemplo.png
+    Click Element                  //*[@class="flex my-6"]//p[text()="Add Item"]
+    sleep                    2
+    Validar Elemento da Pagina     css:#__next div main div h3     Add Item
+    sleep                    2
+    Input Text                     id:name                Sofá
+    Input Text                     id:price               300
+    Input Text                     id:description         4 lugares
+    #Input                          id:file                ${file_path}
+    Input Text                     id:currentInventory    10
+    Input Text                     id:categories          Sala
+    Input Text                     id:brand               Monaco
+    Sleep                          2
+    Scroll Element Into View       css:#__next div main .flex a
+    Sleep                          2
+    Click Element                  css:#__next div main .flex a
+    Sleep                          2
+#--------------------------------------------------------------
+Validar Cadastro Produto
+    ${status}=	Run Keyword And Return Status	Cadastrar novo produto
+    IF   ${status} == True
+        Log To Console    ${green}Teste passou ${green}
+    ELSE
+        Log To Console    ${red}Teste falhou ${red}
+    END   
     
+#--------------------------------------------------------------
+
+Logout Administrador pagina inventario
+    Click Button                   Sign Out                 
+    Sleep                          2
+    Page Should Contain            Sign Up
+    Page Should Not Contain        Sign Out
+
+#------------------------------------------------------------
     
-
-
-
-
-
-
+Validar Logout Administrador pagina inventario
+    ${status}=	Run Keyword And Return Status	Logout Administrador pagina inventario
+    IF   ${status} == True
+        Log To Console    ${green}Teste passou ${green}
+    ELSE
+        Log To Console    ${red}Teste falhou ${red}
+    END
     
+#--------------------------------------------------------------
+Logout Administrador pagina adicionar produto
+    Click Element                  //*[@class="flex my-6"]//p[text()="Add Item"]
+    Sleep                          2
+    Click Button                   Sign Out                 
+    Sleep                          2
+    Page Should Contain            Sign Up
+    Page Should Not Contain        Sign Out   
 
-    
-	    
-    
-    
+
+Validar Logout Administrador pagina adiconar produto
+    ${status}=	Run Keyword And Return Status	Logout Administrador pagina adicionar produto
+    IF   ${status} == True
+        Log To Console    ${green}Teste passou ${green}
+    ELSE
+        Log To Console    ${red}Teste falhou ${red}
+    END
 
     
 
